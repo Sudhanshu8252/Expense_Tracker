@@ -13,7 +13,7 @@ const app = express();
 // ====== Global Middlewares ======
 app.use(cors({
     origin: [
-        "https://expensetracker-topaz-xi.vercel.app/"
+        "https://expensetracker-topaz-xi.vercel.app"
     ],
     credentials: true
 })); // allow requests from frontend
