@@ -11,7 +11,13 @@ import recurringRoutes from "./routes/recurringRoutes.js";
 const app = express();
 
 // ====== Global Middlewares ======
-app.use(cors()); // allow requests from frontend
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://expensetracker-topaz-xi.vercel.app/"
+    ],
+    credentials: true
+})); // allow requests from frontend
 app.use(express.json()); // parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // parse form data
 
